@@ -110,7 +110,7 @@ io.on('connection', (socket) => { // tout ce passe dans cette boucle
           user.counter = 0;
         }
           user.counter++;
-        //  user.y = Math.min(user.y + user.velocityY, user.ground);// ok
+        //  user.y = Math.min(user.y + user.velocityY, user.ground);// ok //ok
 
            
         
