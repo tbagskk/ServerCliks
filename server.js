@@ -10,7 +10,7 @@ import { clearInterval } from 'timers';
 
 const app = express();
 
-const port = 3001;
+const port = 8080;
 
 const server = http.createServer(app); // pour créer le serveur socket
 
