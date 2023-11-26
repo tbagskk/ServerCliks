@@ -146,8 +146,8 @@ io.on('connection', (socket) => { // tout ce passe dans cette boucle
           
   }
   
-  if (!Idinterval)
-    Idinterval = setInterval(Update, 1000 / 6);
+  // if (!Idinterval)
+  //   Idinterval = setInterval(Update, 1000 / 6);
 
 
 
