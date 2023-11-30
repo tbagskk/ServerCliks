@@ -20,6 +20,7 @@ const server = http.createServer(app); // pour créer le serveur socket
 
 app.use(cors({ 
   origin: 'https://cliks.vercel.app', // pour autoriser les appel get et post depuis un autre url
+  // origin: 'http://10.18.207.221:3000'
 }));
 
 
@@ -42,6 +43,7 @@ const io = new Server(server, { // pour créer une connexion socket
     path: '/socket.io', 
     cors: {
         origin: 'https://cliks.vercel.app',
+        // origin: 'http://10.18.207.221:3000',
         methods: ["GET", "POST"]
       }
 });

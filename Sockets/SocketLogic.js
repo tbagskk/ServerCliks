@@ -44,7 +44,8 @@ function initSockets(io) {
       });
 
     socket.on("528=", (arg) => {  // lost
-        verifScore(socket.id, io);
+      if (gameLogic.User[socket.id].play === true)
+          verifScore(socket.id, io);
 
         io.to(socket.id).emit("lostServer", 'lost');
     });
