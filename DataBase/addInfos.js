@@ -27,7 +27,7 @@ export default async function addInfos(infos){
                 msg: Infos.msg,
                 name: Infos.name,
                 userId: user.id,
-            },
+            },   
         });
 
         console.log("message bien ajouté avec succès de", Infos.name)
