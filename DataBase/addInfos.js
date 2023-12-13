@@ -3,6 +3,8 @@ const prisma = new PrismaClient();
 
 export default async function addInfos(infos){
 
+    console.log(infos);
+
     const Infos = {
         name: infos.name,
         msg: infos.msg
