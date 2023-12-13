@@ -14,5 +14,14 @@ model User {
       score Int
       nbgame Int
       skin String
+      infos  Infos[]
+}
 
+model Infos{
+      id      Int   @id @default(autoincrement())
+      msg     String
+      date    DateTime  @default(now())
+      userId  Int
+      user    User @relation(fields: [userId], references: [id])
+      name    String
 }

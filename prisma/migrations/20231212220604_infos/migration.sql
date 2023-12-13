@@ -1,0 +1,12 @@
+-- CreateTable
+CREATE TABLE "Infos" (
+    "id" SERIAL NOT NULL,
+    "msg" TEXT NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "userId" INTEGER NOT NULL,
+
+    CONSTRAINT "Infos_pkey" PRIMARY KEY ("id")
+);
+
+-- AddForeignKey
+ALTER TABLE "Infos" ADD CONSTRAINT "Infos_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
