@@ -21,8 +21,8 @@ const server = http.createServer(app); // pour créer le serveur socket
 app.use(express.json()); // pour interpreter les requêtes en JSON
 
 app.use(cors({ 
-  // origin: 'https://cliks.vercel.app', // pour autoriser les appel get et post depuis un autre url
-        origin: 'http://localhost:3000',
+  origin: 'https://cliks.vercel.app', // pour autoriser les appel get et post depuis un autre url
+        // origin: 'http://localhost:3000',
 }));
 
 
@@ -51,8 +51,8 @@ app.get('/scores', async(req, res) => {
 const io = new Server(server, { // pour créer une connexion socket
     path: '/socket.io', 
     cors: {
-        // origin: 'https://cliks.vercel.app',
-        origin: 'http://localhost:3000',
+        origin: 'https://cliks.vercel.app',
+        // origin: 'http://localhost:3000',
         methods: ["GET", "POST"]
       }
 });
