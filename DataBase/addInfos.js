@@ -8,9 +8,7 @@ export default async function addInfos(infos){
     const Infos = {
         name: infos.name,
         msg: infos.msg
-        
     }
-
     try {
 
         const user = await prisma.user.findFirst({
