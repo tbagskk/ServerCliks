@@ -35,7 +35,7 @@ export default async function addInfos(infos){
         console.log("message bien ajouté avec succès de", Infos.name)
 
     } catch (error) {
-        console.error ("Erreur lors de l\'ajout du msg");
+        console.error ("Erreur lors de l\'ajout du msg", error);
     } finally {
         await prisma.$disconnect();
     }
