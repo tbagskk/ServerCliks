@@ -19,7 +19,7 @@ export default async function addInfos(infos){
 
         if (!user){
             console.error('User non trouvé');
-            return;
+            return(false);
         }
 
         const newMessage = await prisma.infos.create({

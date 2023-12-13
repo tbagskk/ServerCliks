@@ -15,7 +15,7 @@ import initSockets from './Sockets/SocketLogic.js';
 EventEmitter.defaultMaxListeners = 15;
 dotenv.config();
 const app = express();
-const port = 8080;
+const port = 3001;
 const server = http.createServer(app); // pour créer le serveur socket
 
 app.use(express.json()); // pour interpreter les requêtes en JSON
@@ -33,6 +33,11 @@ app.get('/', (req, res) => {
 app.post('/infos', async (req, res) => {
   try{
     const msg = await addInfos(req.body);
+      if (msg === false){
+        res.status(200).json({message: 'User non trouvé'});
+      } else {
+        res.status(201).json({message: 'Message bien envoyé'});
+      }
   } catch(error) {
     res.status(500).json({error: 'erreur'});
   }
